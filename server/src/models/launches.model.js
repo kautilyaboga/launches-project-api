@@ -48,7 +48,7 @@ async function getLatestFlightNumber() {
 const SPACRX_API_URL = "https://api.spacexdata.com/v4/launches/query";
 
 async function populateLaunches() {
-  console.log('Downloading SpaceX Launch Data');
+  // console.log('Downloading SpaceX Launch Data');
   const response = await axios.post(SPACRX_API_URL, {
     query : {},
     options: {
