@@ -19,7 +19,7 @@ app.use(
 );
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname,'../public')))
+// app.use(express.static(path.join(__dirname,'../public')))
 // app.use(express.static('../public')) // Doesn't work
 
 
@@ -29,8 +29,8 @@ app.use('/v1', v1api)
 // This code needs to be at the bottom of the app middleware.
 // Code works without below code in local but to make sure it runs in every environment
 // it is better to be included. 
-app.get('/*',(req,res)=>{
-  res.sendFile(path.join(__dirname,'../public/index.html'))
-})
+// app.get('/*',(req,res)=>{
+//   res.sendFile(path.join(__dirname,'../public/index.html'))
+// })
 
 module.exports = app;
